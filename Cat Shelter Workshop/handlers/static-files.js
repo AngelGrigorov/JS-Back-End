@@ -1,3 +1,5 @@
+const url = require('url');
+const fs = require('fs');
 function getContentType(url){
     if(url.endsWith('css')){
         return 'text/css';
@@ -7,6 +9,8 @@ function getContentType(url){
     return 'image/png';
     }else if(url.endsWith('js')){
         return 'text/javascript';
+    }else if(url.endsWith('ico')){
+        return 'image/x-icon';
     }
 }
 module.exports = (req, res) => {
@@ -23,8 +27,10 @@ module.exports = (req, res) => {
             return;
         }
         console.log(pathname);
+        let type = getContentType(pathname);
+        console.log(type);
         res.writeHead(200, {
-            'Content-Type': getContentType(pathname)
+            'Content-Type': type
         });
         res.write(data);
         res.end();
