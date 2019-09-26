@@ -11,6 +11,8 @@ function getContentType(url){
         return 'text/javascript';
     }else if(url.endsWith('ico')){
         return 'image/x-icon';
+    }else{
+        return Error('ne vliza')
     }
 }
 module.exports = (req, res) => {
