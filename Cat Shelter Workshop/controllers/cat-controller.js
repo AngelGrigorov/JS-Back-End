@@ -49,7 +49,9 @@ module.exports = (req, res) => {
 
             fs.readFile('../Cat Shelter/data/cats.json', 'utf-8', (err, data) => {
                 if (err) {
+                    console.log(err.message);
                     throw err;
+                    
                 }
 
                 let allCats = JSON.parse(data);
