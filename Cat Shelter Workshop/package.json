@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Angel Grigorov",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "formidable": "^1.2.1",
