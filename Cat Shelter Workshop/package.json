@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AngelGrigorov/JS-Back-End/issues"
   },
-  "homepage": "https://github.com/AngelGrigorov/JS-Back-End#readme"
+  "homepage": "https://github.com/AngelGrigorov/JS-Back-End#readme",
+  "dependencies": {
+    "formidable": "^1.2.1"
+  }
 }
