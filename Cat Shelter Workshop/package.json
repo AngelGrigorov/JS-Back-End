@@ -2,21 +2,15 @@
   "name": "cat-shelter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AngelGrigorov/JS-Back-End.git"
-  },
-  "author": "Angel Grigorov",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AngelGrigorov/JS-Back-End/issues"
-  },
-  "homepage": "https://github.com/AngelGrigorov/JS-Back-End#readme",
   "dependencies": {
-    "formidable": "^1.2.1"
+    "formidable": "^1.2.1",
+    "global-path": "^1.1.0"
   }
 }
