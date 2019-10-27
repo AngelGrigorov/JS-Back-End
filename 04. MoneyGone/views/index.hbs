@@ -1,0 +1,68 @@
+      {{#if user}}
+       <main>
+         <section class="actions">
+            <form action="">
+                <h2>Salary time? Refill your account amount.</h2>
+                <input type="text" id="refill-amount">
+                <button type="submit">Refill</button>
+            </form>
+            <div>
+                <h2>New expense comming up?</h2>
+                <a href="#">Add it now</a>
+            </div>
+        </section>
+         <hr class="separator">
+            {{#if expenses}}
+         <table class="expenses">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Merchant</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                {{#each expanses}}
+                <tr>
+                    <td>
+                        <img src="static/images/date.png" />
+                        <p>{{this.date}}</p>
+                    </td>
+                    <td>
+                        <p>{{this.name}}</p>
+                        <!-- if logika -->
+                        <div class="report">
+                            <a href="#">Report</a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="static/images/amount.png" alt="">
+                        <p>{{this.price}}</p>
+                    </td>
+                    <td>
+                        <img src="static/images/category.png" alt="">
+                        <p>{{this.category}}</p>
+                    </td>
+                    <td>
+                        <img src="static/images/hastag.png" alt="">
+                        <p>{{this.description}}</p>
+                    </td>
+                </tr>
+                 {{/each}}
+
+            </tbody>
+        </table>
+        
+            {{else}}
+		<h1 class="no-expenses">No expenses founded so far.. <span>GOOD JOB!</span></h1>
+            {{/if}}
+            </main>
+
+            {{else}}
+        <main>
+        <p class="guest-message">MoneyGone? The best expense tracker tool of all time!<br>Аre you new here? <a href="/register">Register</a> yourself!</p>
+    </main>
+    {{/if}}
